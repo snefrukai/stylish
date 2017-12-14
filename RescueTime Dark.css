@@ -1,0 +1,131 @@
+@-moz-document domain("www.rescuetime.com") {
+.tappable-select-label
+{
+	background: none;
+}
+#dashboard-insight-bar
+{
+	background: #1d1f21 !important;
+	color: #999 !important;
+	border: 1px solid rgba(0, 0, 0, .1) !important;
+}
+/* dashboard-summary */
+
+#dashboard-time-summary
+{
+	background: #1d1f21 !important;
+	border: 1px solid rgba(0, 0, 0, .1) !important;
+}
+#dashboard-time-summary-total
+{
+	color: rgba(255, 255, 255, .76) !important;
+}
+#dashbaord-time-summary-meta div
+{
+	color: #999 !important;
+}
+/* dashboard-goal */
+
+.goal-block,
+#dashboard-achievments div,
+.rescuetime-pro-tip-wrapper
+{
+	border: 1px solid rgba(0, 0, 0, .1) !important;
+	background: #1d1f21 !important;
+}
+#dashboard-goal-summary,
+#dashboard-achievments div
+{
+	color: #999 !important;
+}
+/* background */
+
+body,
+SECTION#secondary-page-content,
+SECTION#page-title-block
+{
+	background: #2a2a2a;
+}
+/* tab */
+
+SECTION#page-title-block DIV#page-nav-bar DIV#page-nav-tabs UL LI.selected A:after
+{
+	border-bottom-color: #999;
+}
+/* font */
+
+body,
+SECTION#page-title-block DIV#page-nav-bar DIV#page-nav-tabs UL LI A,
+DIV.chart-container text.ylabel,
+text.xlabel,
+text.ylabel
+{
+	color: #999 !important;
+}
+SECTION#page-title-block H1,
+h1,
+h2,
+h3
+{
+	color: rgba(255, 255, 255, .76) !important;
+}
+/* Activities */
+
+table,
+table tfoot
+{
+	background: #1d1f21;
+}
+table thead,
+table tr.even,
+table tr.alt,
+table tr:nth-of-type(even)
+{
+	background: #1b1f23;
+}
+.report-table-primary-field A,
+.report-table-meta A,
+DIV#hidden-rows-toggle A
+{
+	color: rgba(95, 158, 234, .87);
+	padding-bottom: 1px !important;
+}
+.report-table-primary-field A:hover,
+.report-table-meta A:hover,
+DIV#hidden-rows-toggle A:hover
+{
+	color: rgba(95, 158, 234, 1);
+	text-decoration: none !important;
+	border-bottom: 2px solid;
+}
+.report-table-primary-field A:active,
+DIV#hidden-rows-toggle A:active
+{
+	color: #4b7cb8;
+}
+table thead tr th,
+table thead tr td,
+table tfoot tr th,
+table tfoot tr td,
+table tr th,
+table tr td,
+.report-table-meta A
+{
+	color: #999 !important;
+}
+table,
+table td,
+table th
+{
+	border: 1px solid rgba(0, 0, 0, .1) !important;
+}
+footer
+{
+	background: #2a2a2a;
+	color: rgba(255, 255, 255, .54);
+}
+footer a
+{
+	color: rgba(255, 255, 255, .54);
+}
+}
