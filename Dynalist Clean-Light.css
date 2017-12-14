@@ -1,0 +1,253 @@
+@-moz-document url-prefix("https://dynalist.io/d/") {
+/* title */
+
+.Node.is-currentRoot > .Node-self
+{
+	margin-top: .4em;
+	margin-bottom: 1.4em;
+}
+.Node.is-currentRoot > .Node-self .node-line,
+.Node.is-currentRoot > .Node-self.is-heading .node-line,
+.Node.is-currentRoot > .Node-self .node-line-strict,
+.Node.is-currentRoot > .Node-self.is-heading .node-line-strict
+{
+	height: inherit;
+	line-height: 1.3;
+}
+.Node.is-currentRoot > .Node-self .Node-renderedContent,
+.Node.is-currentRoot > .Node-self .Node-content
+{
+	width: calc(100% + .3em);
+	padding-top: .2em;
+	padding-bottom: .2em;
+	margin-left: -.2em;
+	padding-left: .2em;
+	color: rgba(0, 0, 0, .87);
+}
+/* item normal */
+
+.Node-children .Node-renderedContent,
+.Node-children .Node-content
+{
+	width: calc(100% + .3em);
+	margin-left: -.3em;
+	padding-left: .3em;
+	line-height: 1.5;
+	padding-top: .16em;
+	padding-bottom: .24em;
+	color: rgba(0, 0, 0, .87);
+}
+/* item container */
+
+.Node-self
+{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.Node-children .Node-outer .Node
+{
+	margin-top: 0;
+	border: none;
+}
+.Node-children .Node-outer
+{
+	margin: 2px 0;
+}
+.Node-children .Node-outer:last-of-type
+{
+	margin-bottom: .6em;
+}
+/* note */
+
+.Node-noteContainer
+{
+	margin-top: 1px;
+}
+.Node-note,
+.Node-renderedNote
+{
+	width: calc(100% + .5em);
+	margin-left: -.36em;
+	padding: .0em .36em;
+	line-height: 1.7 !important;
+	color: rgba(0, 0, 0, .54);
+}
+/* item hover and focus */
+
+.Node-content:hover,
+.Node-renderedContent:hover,
+.Node-note:hover,
+.Node-renderedNote:hover
+{
+	color: rgba(0, 0, 0, .87);
+	background: rgba(0, 0, 0, .06);
+}
+.Node-content:focus,
+.Node-renderedContent:focus,
+.Node-note:focus,
+.Node-renderedNote:focus
+{
+	color: rgba(0, 0, 0, 1);
+	background: rgba(0, 0, 0, .09);
+}
+.CurrentLineHighlight
+{
+	background: none;
+}
+/* item checked */
+
+.Node.is-checked .Node-checkbox,
+.Node.is-checked .Node-content,
+.Node.is-checked .Node-renderedContent,
+.Node.is-checked .Node-note,
+.Node.is-checked .Node-renderedNote
+{
+	opacity: .38;
+	color: inherit;
+}
+}
+
+@-moz-document url-prefix("https://dynalist.io/d/") {
+/* bullet */
+
+.Node.is-currentRoot > .Node-children
+{
+	padding-top: 1.6em !important;
+	border-top: 3px solid rgba(0, 0, 0, .08);
+	border-left: none !important;
+}
+.Node-children
+{
+	border-left: 1px solid rgba(0, 0, 0, .10) !important;
+}
+.Node-self .node-icon
+{
+	top: .6em;
+}
+.Node-children .node-icon
+{
+	top: .46em;
+}
+.Node-bullet
+{
+	padding-top: .3em;
+}
+.Node-bullet:before
+{
+	color: rgba(0, 0, 0, .4);
+	font-size: 75%;
+}
+.Node-self.is-numbered > .Node-bullet
+{
+	color: rgba(0, 0, 0, .54);
+}
+/* checkbox */
+
+.Node-checkbox
+{
+	margin-right: .24em;
+}
+.is-smallFont .Node-checkbox
+{
+	margin-top: 8px;
+}
+.is-mediumFont .Node-checkbox
+{
+	margin-top: 9px;
+}
+.is-largeFont .Node-checkbox
+{
+	margin-top: 11px;
+}
+.Node.is-checklist .Node-contentContainer,
+.Node.is-checklist .Node-noteContainer
+{
+	width: calc(100% - 50px);
+}
+.Node.is-checklist > .Node-self.is-numbered .Node-contentContainer,
+.Node.is-checklist > .Node-self.is-numbered .Node-noteContainer
+{
+	width: calc(100% - 60px);
+}
+}
+
+@-moz-document url-prefix("https://dynalist.io/d/") {
+.is-desktop .AppContainer.is-borderShowing .Document
+{
+	margin-bottom: 6em;
+	border: 2px solid rgba(0, 0, 0, .1);
+	border-radius: 1px;
+	/* 	box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2); */
+}
+.DocumentTools-overlay
+{
+	background: none;
+	box-shadow: none;
+}
+.is-desktop .AppContainer.is-borderShowing .Document-rootNode
+{
+	padding-top: 1.6em;
+	padding-bottom: 7em;
+	min-height: 61.4vh;
+}
+.Document-bottomSpace
+{
+	display: none;
+}
+/* link */
+
+.DocumentBreadcrumb-item,
+.node-link
+{
+	color: rgba(95, 158, 234, 1);
+	text-decoration: none !important;
+	border-bottom: 2px solid transparent;
+}
+.DocumentBreadcrumb-item:hover,
+.node-link:hover
+{
+	color: rgba(95, 158, 234, 1);
+	border-bottom: 2px solid;
+}
+.DocumentBreadcrumb-item:active,
+.node-link:active
+{
+	color: #4b7cb8;
+}
+/* inline item */
+
+.node-inline-item:before
+{
+	margin-right: .26em;
+}
+.node-inline-item
+{
+	padding: 0 .6em 0 .4em;
+	line-height: inherit !important;
+}
+/* inline link */
+
+.node-link-internal.is-displayed
+{
+	border: 1px solid rgba(0, 0, 0, .09);
+}
+.node-link-internal.is-displayed:hover
+{
+	background: rgba(0, 0, 0, .09);
+	border: 1px solid rgba(0, 0, 0, .09);
+}
+/* inline code */
+
+.node-inline-code
+{
+	vertical-align: inherit;
+}
+/* selection */
+
+.Node.is-selected
+{
+	background: rgba(0, 0, 0, .09);
+}
+}
