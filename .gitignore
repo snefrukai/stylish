@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.png
+dynalist_snapshot/thumb-dynalsit.psd
+*.jpg
+dynalist_snapshot/thumb-blog.psd
