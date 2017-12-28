@@ -42,7 +42,7 @@
 	padding-left: .3em;
 	padding-top: .16em;
 	padding-bottom: .24em;
-	padding: .1em 0 .1
+	padding: .15em 0 .15em .3em;
 	line-height: 1.5;
 	color: rgba(255, 255, 255, .66);
 }
@@ -71,8 +71,11 @@
 .Node-noteContainer
 {
 	/* 	margin-top: .1em; */
-		margin-bottom: .4em;
+	
+	margin-bottom: .2em;
 }
+/* todo: move up below node-conent*/
+
 .Node-note,
 .Node-renderedNote
 {
@@ -278,8 +281,11 @@
 }
 .node-inline-code
 {
-	vertical-align: inherit;
+	float: left;
+	margin-top: .14em;
+	line-height: inherit !important;
 	/* 	font-size: inherit !important; */
+	/* 	vertical-align: inherit; */
 }
 /* selection */
 
