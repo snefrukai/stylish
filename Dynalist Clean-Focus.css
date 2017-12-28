@@ -1,0 +1,42 @@
+/* title */
+
+.Node.is-currentRoot > .Node-self .Node-content,
+.Node.is-currentRoot > .Node-self .Node-renderedContent
+{
+	color: rgba(0, 0, 0, .87);
+	font-weight: normal;
+	line-height: 1;
+	margin: 2px 0 10px 0;
+}
+.Node-children
+{
+	border-left: 1px solid rgba(0, 0, 0, .12);
+}
+/* list */
+
+.is-smallFont .Node-content,
+.is-mediumFont .Node-content,
+.is-largeFont .Node-content,
+.Node-self.is-noteEmpty .Node-content,
+.Node-self.is-noteEmpty .Node-renderedContent,
+.Node-note,
+.Node-renderedNote
+{
+	color: rgba(0, 0, 0, .4);
+}
+.Node-note
+{
+	color: rgba(0, 0, 0, .54);
+}
+.Node .is-checked .Node-self.is-noteEmpty .Node-content
+{
+	color: rgba(0, 0, 0, .33);
+}
+.CurrentLineHighlight
+{
+	background: rgba(0, 0, 0, .08);
+}
+.Node-self.is-noteEmpty .Node-content:focus
+{
+	color: rgba(0, 0, 0, .87);
+}
