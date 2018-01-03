@@ -97,33 +97,7 @@
 	padding-top: 1.4em;
 	border-top: 2px solid rgba(0, 0, 0, .2);
 }
-/* code-editor */
 
-.CodeMirror
-{
-	margin-top: .8em;
-	height: 66% !important;
-	border: 2px solid rgba(0, 0, 0, .4) !important;
-	background: #1d1f21 !important;
-	line-height: 1.75 !important;
-	font-size: .94rem !important;
-	font-size: 1.04rem !important;
-}
-.CodeMirror:focus,
-.cm-s-lesser-dark.CodeMirror:focus
-{
-	outline: none !important;
-}
-.CodeMirror-gutters
-{
-	border-right: 2px solid rgba(0, 0, 0, .4) !important;
-	background: #1d1f21 !important;
-}
-.cm-s-lesser-dark .CodeMirror-activeline-background,
-.CodeMirror-activeline-background
-{
-	background: rgba(255, 255, 255, .11) !important;
-}
 /* popup */
 
 #help-popup
@@ -142,6 +116,37 @@
 .beautify-options select
 {
 	margin: 0 .4em;
+}
+}
+
+@-moz-document regexp("chrome-extension.*edit.html.*"), regexp("chrome-extension.*manage.html.*") {
+/* code-editor */
+
+.CodeMirror
+{
+	margin-top: .8em;
+	height: 66% !important;
+	border: 2px solid rgba(0, 0, 0, .4) !important;
+	background: #1d1f21 !important;
+	line-height: 1.6 !important;
+/* 	font-size: .9rem !important; */
+	font-size: .9rem !important;
+/* 	font-size: 1.04rem !important; */
+}
+.CodeMirror:focus,
+.cm-s-lesser-dark.CodeMirror:focus
+{
+	outline: none !important;
+}
+.CodeMirror-gutters
+{
+	border-right: 2px solid rgba(0, 0, 0, .4) !important;
+	background: #1d1f21 !important;
+}
+.cm-s-lesser-dark .CodeMirror-activeline-background,
+.CodeMirror-activeline-background
+{
+	background: rgba(255, 255, 255, .11) !important;
 }
 }
 
