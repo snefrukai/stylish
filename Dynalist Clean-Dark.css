@@ -249,6 +249,8 @@
 
 .node-inline-item
 {
+	background: rgba(255, 255, 255, .1);
+	border: none;
 	vertical-align: text-bottom;
 	padding-left: .3em;
 	padding-right: .4em;
@@ -259,17 +261,21 @@
 	margin-right: .26em;
 	color: rgba(255, 255, 255, .38);
 }
+.node-inline-item:hover
+{
+	background: rgba(255, 255, 255, .24);
+}
 .node-link-internal.is-displayed
 {
 	color: rgba(255, 255, 255, .66);
 	/* 	padding-bottom: 1px; */
 	/* 	margin-bottom: 1px; */
 	/* 	 height 27px非整，总有一边多1px */
+	/* 	border: 1px solid rgba(255, 255, 255, .12); */
+	/* 	background: none; */
 	
-	border: 1px solid rgba(255, 255, 255, .12);
-	background: none;
 	border: none;
-	background: rgba(255, 255, 255, .08);
+	/* 	background: rgba(255, 255, 255, .08); */
 }
 .node-link-internal.is-displayed:before
 {
