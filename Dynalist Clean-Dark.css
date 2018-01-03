@@ -40,27 +40,21 @@
 	width: calc(100% + .3em);
 	margin-left: -.3em;
 	padding-left: .3em;
-	padding-top: .16em;
-	padding-bottom: .24em;
-	padding: .15em 0 .15em .3em;
-	line-height: 1.5;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	/* padding do not work well when not in whole number
+	padding-top: .24em;
+	padding-bottom: .16em; */
+	
+	line-height: 1.4;
 	color: rgba(255, 255, 255, .66);
 }
 /* item container */
 
-.Node-self
-{
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-}
 .Node-children .Node-outer .Node
 {
 	margin-top: 0;
 	border: none;
-}
-.Node-children .Node-outer
-{
-	margin: 1px 0;
 }
 .Node-children .Node-outer:last-of-type
 {
@@ -161,7 +155,7 @@
 }
 .Node-bullet
 {
-	padding-top: .3em;
+	padding-top: .24em;
 	/* 	padding-top: .46em; */
 	/* 	padding-top: 5px; */
 }
