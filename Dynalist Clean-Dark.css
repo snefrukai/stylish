@@ -172,17 +172,17 @@
 }
 .is-smallFont .Node-checkbox
 {
-	margin-top: 8px;
+	margin-top: 6px;
 	/* 	margin-top: .6em; */
 }
 .is-mediumFont .Node-checkbox
 {
-	margin-top: 9px;
+	margin-top: 7px;
 	/* 	margin-top: .70em; */
 }
 .is-largeFont .Node-checkbox
 {
-	margin-top: 11px;
+	margin-top: 9px;
 	/* 	margin-top: .86em; */
 }
 .Node.is-checklist .Node-contentContainer,
