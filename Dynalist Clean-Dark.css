@@ -289,11 +289,11 @@
 }
 .node-inline-code
 {
-	float: left;
-	margin-top: .14em;
-	line-height: inherit !important;
-	/* 	font-size: inherit !important; */
-	/* 	vertical-align: inherit; */
+	vertical-align: text-bottom;
+	margin: 0 .1em;
+	/* 	margin-bottom: 1px; */
+	
+	line-height: 1.4 !important;
 }
 /* selection */
 
