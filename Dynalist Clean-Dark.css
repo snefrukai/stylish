@@ -247,25 +247,45 @@
 }
 /* inline item */
 
+.node-inline-item
+{
+	vertical-align: text-bottom;
+	padding-left: .3em;
+	padding-right: .4em;
+	line-height: inherit !important;
+}
 .node-inline-item:before
 {
 	margin-right: .26em;
-}
-.node-inline-item
-{
-	padding: 0 .6em 0 .4em;
-	line-height: inherit !important;
-	/* 	line-height: 1.7; */
+	color: rgba(255, 255, 255, .38);
 }
 .node-link-internal.is-displayed
 {
+	color: rgba(255, 255, 255, .66);
+	padding-bottom: 1px;
+	/* 	margin-bottom: 1px; */
+	/* 	 height 27px非整，总有一边多1px*/
+	
 	border: 1px solid rgba(255, 255, 255, .12);
-	/* 	font-size: inherit !important; */
+	background: none;
+	border: none;
+	background: rgba(255, 255, 255, .08);
+}
+.node-link-internal.is-displayed:before
+{
+	margin-top: 3px;
+	line-height: 1;
 }
 .node-link-internal.is-displayed:hover
 {
-	background: rgba(255, 255, 255, .12);
-	border: 1px solid rgba(255, 255, 255, .12);
+	background: rgba(0, 138, 255, 1);
+	color: rgba(255, 255, 255, .87);
+	/* 	background: rgba(255, 255, 255, .1); */
+	/* 	color: rgba(95, 158, 234, 1); */
+}
+.node-link-internal.is-displayed:hover:before
+{
+	color: rgba(255, 255, 255, .87);
 }
 .node-inline-code
 {
