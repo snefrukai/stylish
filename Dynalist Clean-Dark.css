@@ -74,18 +74,12 @@
 .Node-renderedNote
 {
 	width: calc(100% + .36em);
-	min-height: 1.7em !important;
 	margin-left: -.36em;
 	padding: .0em .36em;
-	line-height: 1.7 !important;
 	color: rgba(255, 255, 255, .38);
+	/* 	min-height: 1.7em !important; */
+	/* 	line-height: 1.7 !important; */
 }
-/* .Node-renderedNote:before,
-.Node-note:before,
-.Node-noteContainer:before
-{
-		content: "!"
-} */
 /* .Node-self.is-showingNoteFirstLine:not(.is-noteEmpty) .Node-note,
 .Node-self.is-showingNoteFirstLine:not(.is-noteEmpty) .Node-renderedNote
 {
