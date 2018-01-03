@@ -265,6 +265,16 @@
 {
 	background: rgba(255, 255, 255, .24);
 }
+.AppContainer.is-highlighting-overdue .node-time.is-overdue
+{
+	background: #532020;
+	background: #652727;
+}
+.AppContainer.is-highlighting-overdue .node-time.is-overdue:hover
+{
+	background: #782e2e;
+	background: #8a3535;
+}
 .node-link-internal.is-displayed
 {
 	color: rgba(255, 255, 255, .66);
