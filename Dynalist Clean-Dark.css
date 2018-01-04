@@ -265,15 +265,22 @@
 {
 	background: rgba(255, 255, 255, .24);
 }
-.AppContainer.is-highlighting-overdue .node-time.is-overdue
+.node-time
+{
+	border: none !important;
+	text-transform: lowercase;
+}
+/* .AppContainer.is-highlighting-overdue .node-time.is-overdue, */
+
+.node-time.is-overdue
 {
 	background: #532020;
-	background: #652727;
+	background: #652727 !important;
 }
-.AppContainer.is-highlighting-overdue .node-time.is-overdue:hover
+.node-time.is-overdue:hover
 {
 	background: #782e2e;
-	background: #8a3535;
+	background: #8a3535!important;
 }
 .node-link-internal.is-displayed
 {
