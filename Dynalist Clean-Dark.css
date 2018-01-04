@@ -247,13 +247,19 @@
 }
 /* inline item */
 
+.node-tag,
+.node-inline-code,
 .node-inline-item
 {
-	background: rgba(255, 255, 255, .1);
-	border: none;
+	border-radius: 2px;
+	background: rgba(255, 255, 255, .12);
+}
+.node-inline-item
+{
 	vertical-align: text-bottom;
 	padding-left: .3em;
 	padding-right: .4em;
+	border: none !important;
 	line-height: inherit !important;
 }
 .node-inline-item:before
@@ -261,13 +267,17 @@
 	margin-right: .26em;
 	color: rgba(255, 255, 255, .38);
 }
+.node-tag:hover,
 .node-inline-item:hover
 {
 	background: rgba(255, 255, 255, .24);
+	color: rgba(255, 255, 255, .87);
 }
 .node-time
+/* used with .node-inline-item */
+
+
 {
-	border: none !important;
 	text-transform: lowercase;
 }
 /* .AppContainer.is-highlighting-overdue .node-time.is-overdue, */
@@ -282,16 +292,19 @@
 	background: #782e2e;
 	background: #8a3535!important;
 }
+.node-tag,
 .node-link-internal.is-displayed
+/* acted as link */
+
+
 {
-	color: rgba(255, 255, 255, .66);
+	border: none;
+	color: inherit;
 	/* 	padding-bottom: 1px; */
 	/* 	margin-bottom: 1px; */
 	/* 	 height 27px非整，总有一边多1px */
 	/* 	border: 1px solid rgba(255, 255, 255, .12); */
 	/* 	background: none; */
-	
-	border: none;
 	/* 	background: rgba(255, 255, 255, .08); */
 }
 .node-link-internal.is-displayed:before
@@ -300,16 +313,21 @@
 	line-height: 1;
 }
 .node-link-internal.is-displayed:hover
+/* independent hover style */
+
+
 {
 	background: rgba(0, 138, 255, 1);
-	color: rgba(255, 255, 255, .87);
 	/* 	background: rgba(255, 255, 255, .1); */
-	/* 	color: rgba(95, 158, 234, 1); */
 }
+.node-link-internal.is-displayed:hover,
 .node-link-internal.is-displayed:hover:before
 {
 	color: rgba(255, 255, 255, .87);
+	/* 	color: rgba(95, 158, 234, 1); */
 }
+/* code and tad are used independently */
+
 .node-inline-code
 {
 	vertical-align: text-bottom;
@@ -317,6 +335,11 @@
 	/* 	margin-bottom: 1px; */
 	
 	line-height: 1.4 !important;
+}
+.node-tag
+{
+	padding: 0 5px;
+	text-decoration: none;
 }
 /* selection */
 
