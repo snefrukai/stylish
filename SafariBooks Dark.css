@@ -229,10 +229,9 @@ body
 {
 	background-color: #1d1f21;
 }
-/* .button,
+.button,
 a.button,
-button, */
-
+button,
 .articlelist>li .title-block,
 .topnav>li a:focus,
 .topnav>li a:hover,
@@ -354,6 +353,7 @@ a.button,
 button
 {
 	font-weight: normal;
+	background: none !important;
 }
 .desktop-menu>ul li.main-topic a,
 .no-touch .rec-delete:focus,
