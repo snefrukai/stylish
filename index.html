@@ -1,0 +1,30 @@
+<html><head><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/><link href="./sass/local.css" rel="stylesheet"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/></head><body><header></header><main><div class="container"><div class="card"><div class="card-content"><p class="codepen" data-height="418" data-theme-id="dark" data-slug-hash="xpjEaV" data-default-tab="js,result" data-user="snefrukai" data-embed-version="2" data-pen-title="Prototype Widget - Pseudo Article with Random Line-Length ">See the Pen <a href="https://codepen.io/snefrukai/pen/xpjEaV/">Prototype Widget - Pseudo Article with Random Line-Length </a> by Zhao Kai (<a href="https://codepen.io/snefrukai">@snefrukai</a>) on <a href="https://codepen.io">CodePen</a>.</p><script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script></div></div></div><div class="container"><div class="card"><div class="card-content"><h4>data</h4><p><b>school_fdu_cn</b></p><p>复旦大学</p><p>2012 – 2014</p><p><b>pseudo_en</b></p><p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p><p>Amet tempor mollit aliquip pariatur excepteur commodo do ea cillum commodo Lorem et occaecat elit qui et. Aliquip labore ex ex esse voluptate occaecat Lorem ullamco deserunt. Aliqua cillum excepteur irure consequat id quis ea. Sit proident ullamco aute magna pariatur nostrud labore. Reprehenderit aliqua commodo eiusmod aliquip est do duis amet proident magna consectetur consequat eu commodo fugiat non quis. Enim aliquip exercitation ullamco adipisicing voluptate excepteur minim exercitation minim minim commodo adipisicing exercitation officia nisi adipisicing. Anim id duis qui consequat labore adipisicing sint dolor elit cillum anim et fugiat.</p></div></div></div><div class="container"><div class="card"><div class="card-content"><h4>text</h4><div class="pseudo_text" title="This is pseudo text."><!--each val in Array(line_numb)div--><div class="pseudo_text_lastLine"></div></div><div class="pseudo_text" title="This is pseudo text."><!--each val in Array(line_numb)div--><div></div><div class="pseudo_text_lastLine"></div></div></div></div></div><div class="container"><div class="card"><div class="card-content"><h4>link</h4><!-- 不能用合并的表达式if class1=="local"
+- var target = "", className = class2 if class2;
+else
+    - var target = "_blank", className = class1 if class1;--><p><a href="" title="Andrew - blank" target="_blank">Andrew - blank</a></p><!-- 不能用合并的表达式if class1=="local"
+- var target = "", className = class2 if class2;
+else
+    - var target = "_blank", className = class1 if class1;--><p><a class="class007" href="" title="Barrington - blank" target="_blank">Barrington - blank</a></p><!-- 不能用合并的表达式if class1=="local"
+- var target = "", className = class2 if class2;
+else
+    - var target = "_blank", className = class1 if class1;--><p><a class="class007" href="" title="Clifton - local+class" target="">Clifton - local+class</a></p><!-- 不能用合并的表达式if class1=="local"
+- var target = "", className = class2 if class2;
+else
+    - var target = "_blank", className = class1 if class1;--><p><a href="" title="Dilemma - local" target="">Dilemma - local</a></p></div></div></div><div class="container"><div class="card"><div class="card-content"><h4>var</h4><h5>Math.random()</h5><p>52.40</p><h5>line</h5><p>[object Object]</p><p>5</p><p>[object Object]</p><p>0.4</p><p>[object Object]</p><p>8</p><h5>movie</h5><strong>Ocean's Eleven</strong><p>9.2</p><strong>Pirates of the Caribbean</strong><p>9.7</p><h4>movieList[0].title</h4><p>Ocean's Eleven</p><p>9.7</p></div></div></div><div class="container"><div class="card"><div class="card-content"><h4>loop</h4><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><!--+text_span2(project2)--></div></div></div></main><footer></footer><script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script><!-- set class pseudo_text_last width to random--><script type="text/javascript">~function () {
+    var x = document.getElementsByClassName("pseudo_text_lastLine");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.width = Math.random()*100+"%";
+    }
+}
+</script><script type="text/javascript">document.body.bgColor="#eee";
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script><!-- material_select--><script type="text/javascript">$(document).ready(function(){
+    $(".button-collapse").sideNav({
+        menuWidth: 200,
+        closeOnClick: false,
+    });
+    $('select').material_select();
+});
+</script><!-- jQuery test--><script type="text/javascript">$(function(){
+    $(".pseudo_text .pseudo_text_lastLine").hide();
+});</script></body></html>
