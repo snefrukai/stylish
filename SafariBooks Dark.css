@@ -386,6 +386,7 @@ h3
 [class*=detail-].pod .action a:hover
 {
 	color: #F65D22;
+	text-decoration: underline;
 }
 }
 

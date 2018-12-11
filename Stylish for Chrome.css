@@ -5,8 +5,6 @@
 {
 	display: inline-block;
 	margin-left: 320px;
-	/* 	background: #1d1f21 !important; */
-	
 	border-left: 2px solid rgba(0, 0, 0, .2);
 }
 #installed::after
@@ -21,11 +19,8 @@
 {
 	margin: 1em 1.8em;
 	padding: 1.6em 1.6em;
-	/* 	border-top: none;
-	border-bottom: 4px solid rgba(0, 0, 0, .2); */
-	
-	border: 2px solid rgba(0, 0, 0, .2);
 	background: #1d1f21 !important;
+	border: 2px solid rgba(0, 0, 0, .2);
 }
 #installed h2
 {
@@ -43,11 +38,9 @@
 
 #header
 {
-	box-shadow: none;
 	padding: 0 1.6em;
-	/* 	border-right: 2px solid rgba(0, 0, 0, .2); */
-	
 	border: none;
+	box-shadow: none;
 }
 #header h1
 {
@@ -75,11 +68,10 @@
 {
 	margin-left: 320px;
 	padding: 0;
-	/* 	padding-left: 1.8em; */
-	
 	padding-left: 2.8em;
 	border-left: 3px solid rgba(0, 0, 0, .2);
-	width: 60% !important;
+/* 	width: 60% !important; */
+	width: 60%;
 }
 #sections h2
 {
@@ -226,16 +218,29 @@ button:not(:first-of-type)
 }
 }
 
-@-moz-document url("https://userstyles.org/styles/133160/edit"), regexp("https://userstyles.org/styles/.*/edit") {
+@-moz-document regexp("chrome-extension.*edit.html.*"), regexp("chrome-extension.*manage.html.*") {
 .cm-s-default,
 .CodeMirror
 {
 	height: 666.656px !important;
+	font-size: 1rem;
 	color: red;
-	font-size: 2rem;
 }
-body
+@media (max-width: 737px)
 {
-	color: red;
+	#sections
+{
+		margin: 0;
+	padding: 0 1.6em;
+	width: auto;
+	border: none;
+	}
+}
+@media (max-width: 675px)
+{
+	#installed
+{
+		margin-left: 0;
+	}
 }
 }
