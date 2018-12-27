@@ -1,247 +1,237 @@
 @-moz-document url-prefix("https://dynalist.io/d/") {
-  .Node.is-currentRoot > .Node-self {
-    margin-top: 0.4em;
-    margin-bottom: 1.4em;
-  }
-  .Node.is-currentRoot > .Node-self .node-line,
-  .Node.is-currentRoot > .Node-self.is-heading .node-line,
-  .Node.is-currentRoot > .Node-self .node-line-strict,
-  .Node.is-currentRoot > .Node-self.is-heading .node-line-strict {
-    height: inherit;
-    line-height: 1.3;
-  }
-  .Node.is-currentRoot > .Node-self .Node-renderedContent,
-  .Node.is-currentRoot > .Node-self .Node-content {
-    width: calc(100% + 0.3em);
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    margin-left: -0.2em;
-    padding-left: 0.2em;
-    color: rgba(255,255,255,0.76);
-  }
-  .Node-children .Node-renderedContent,
-  .Node-children .Node-content {
-    width: calc(100% + 0.3em);
-    margin-left: -0.3em;
-    padding-left: 0.3em;
-    padding-top: 3px;
-    padding-bottom: 2px;
-/* padding do not work well when not in whole number
+   /* ------------------------------------------------------------ */
+   /* title */
+   .Node.is-currentRoot>.Node-self {
+      margin-top: .8em;
+      margin-bottom: 1em;
+   }
+   .Node.is-currentRoot>.Node-self .node-line, .Node.is-currentRoot>.Node-self.is-heading .node-line, .Node.is-currentRoot>.Node-self .node-line-strict, .Node.is-currentRoot>.Node-self.is-heading .node-line-strict {
+      /* 	height: inherit; */
+      /* 	line-height: 1.3; */
+   }
+   .Node.is-currentRoot>.Node-self .Node-renderedContent, .Node.is-currentRoot>.Node-self .Node-content {
+      width: calc(100% + .3em);
+      /* 	padding-top: .2em; */
+      /* 	padding-bottom: .2em; */
+      /* 	margin-left: -.2em; */
+      padding-left: .2em;
+      color: rgba(255, 255, 255, .76);
+   }
+   /* ------------------------------------------------------------ */
+   /* item */
+   .Node-children .Node-outer .Node {
+      margin-top: 0;
+      padding: .16em 0;
+      border: none;
+   }
+   .Node-children .Node-outer:first-of-type {
+      margin-top: .1em;
+   }
+   .Node-children .Node-outer:last-of-type {
+      margin-bottom: .3em;
+   }
+   .is-collapsed {
+      margin-top: -.3em;
+      margin-bottom: -.1em;
+      transition: margin 200ms ease-in-out;
+   }
+   .Node-children .Node-renderedContent, .Node-children .Node-content {
+      width: calc(100% + .3em);
+      margin-left: -.3em;
+      padding-left: .3em;
+      /* 	padding-top: 3px; */
+      /* 	padding: .2em .3em .2em; */
+      /* padding do not work well when not in whole number */
+      line-height: 1.4;
+      color: rgba(255, 255, 255, .66);
+   }
+   /* ------------------------------------------------------------ */
+   /* note */
+   .Node-noteContainer {
+      /* 		margin-top: .1em; */
+      margin-bottom: .2em;
+   }
+   .Node-note, .Node-renderedNote {
+      width: calc(100% + .36em);
+      margin-left: -.36em;
+      padding: 0 .36em;
+      color: rgba(255, 255, 255, .38);
+   }
+   /* ------------------------------------------------------------ */
+   /* item hover and focus */
+   .Node-content:hover, .Node-renderedContent:hover, .Node-note:hover, .Node-renderedNote:hover {
+      background: rgba(255, 255, 255, .06);
+      /* 	background: rgba(42,44,45); */
+      color: rgba(255, 255, 255, .66);
+   }
+   .Node-content:focus, .Node-renderedContent:focus, .Node-note:focus, .Node-renderedNote:focus {
+      opacity: 1;
+      /* 	background: rgba(255, 255, 255, .12); */
+      background: rgba(56, 58, 59);
+      color: rgba(255, 255, 255, .86);
+   }
+   .Node.is-selected {
+      /* 		background: rgba(255, 255, 255, .09); */
+      background: rgba(56, 58, 59);
+   }
+   .CurrentLineHighlight {
+      background: none;
+   }
+   /* ------------------------------------------------------------ */
+   /* item checked */
+   .Node.is-checked .Node-checkbox, .Node.is-checked .Node-content, .Node.is-checked .Node-renderedContent, .Node.is-checked .Node-note, .Node.is-checked .Node-renderedNote {
+      opacity: .3;
+      color: inherit;
+   }
+}
+
+@-moz-document url-prefix("https://dynalist.io/d/") {
+   /* ------------------------------------------------------------ */
+   /* border */
+   .Node.is-currentRoot>.Node-children {
+      padding-top: 1.6em !important;
+      border-top: 3px solid rgba(255, 255, 255, .08);
+      border-left: none !important;
+   }
+   .Node-children {
+      border-left: 1px solid rgba(255, 255, 255, .10) !important;
+   }
+   /* ------------------------------------------------------------ */
+   /* bullet */
+   /* .Node-self .node-icon
+{
+	top: .6em;
+}
+.Node-children .node-icon
+{
+	top: .46em;
+} */
+   /* .Node-bullet
+{
 	padding-top: .24em;
-	padding-bottom: .16em; */
-    line-height: 1.4;
-    color: rgba(255,255,255,0.66);
-  }
-  .Node-children .Node-outer .Node {
-    margin-top: 0;
-    border: none;
-  }
-  .Node-children .Node-outer:last-of-type {
-    margin-bottom: 0.6em;
-  }
-  .Node-noteContainer {
-/* 	margin-top: .1em; */
-    margin-bottom: 0.2em;
-  }
-  .Node-note,
-  .Node-renderedNote {
-    width: calc(100% + 0.36em);
-    margin-left: -0.36em;
-    padding: 0em 0.36em;
-    color: rgba(255,255,255,0.38);
-/* 	min-height: 1.7em !important; */
-/* 	line-height: 1.7 !important; */
-  }
-  .Node-content:hover,
-  .Node-renderedContent:hover,
-  .Node-note:hover,
-  .Node-renderedNote:hover {
-/* 	background: #363839; */
-    background: rgba(255,255,255,0.06);
-    color: rgba(255,255,255,0.66);
-  }
-  .Node-content:focus,
-  .Node-renderedContent:focus,
-  .Node-note:focus,
-  .Node-renderedNote:focus {
-    opacity: 1;
-    background: rgba(255,255,255,0.09);
-    color: rgba(255,255,255,0.86);
-  }
-  .CurrentLineHighlight {
-    background: none;
-  }
-  .Node.is-checked .Node-checkbox,
-  .Node.is-checked .Node-content,
-  .Node.is-checked .Node-renderedContent,
-  .Node.is-checked .Node-note,
-  .Node.is-checked .Node-renderedNote {
-    opacity: 0.3;
-    color: inherit;
-  }
+} */
+   .Node-bullet:before {
+      color: rgba(255, 255, 255, .4);
+      font-size: 75%;
+   }
+   .Node-self.is-numbered>.Node-bullet {
+      color: rgba(255, 255, 255, .54);
+   }
+   /* ------------------------------------------------------------ */
+   /* checkbox */
+   .Node-checkbox {
+      margin-right: .24em;
+   }
+   /* .is-smallFont .Node-checkbox
+{
+	margin-top: 6px;
 }
-@-moz-document url-prefix("https://dynalist.io/d/") {
-  .Node.is-currentRoot > .Node-children {
-    padding-top: 1.6em !important;
-    border-top: 3px solid rgba(255,255,255,0.08);
-    border-left: none !important;
-  }
-  .Node-children {
-    border-left: 1px solid rgba(255,255,255,0.1) !important;
-  }
-  .Node-self .node-icon {
-    top: 0.6em;
-  }
-  .Node-children .node-icon {
-    top: 0.46em;
-/* 	top: 4px; */
-  }
-  .Node-bullet {
-    padding-top: 0.24em;
-/* 	padding-top: .46em; */
-/* 	padding-top: 5px; */
-  }
-  .Node-bullet:before {
-    color: rgba(255,255,255,0.4);
-    font-size: 75%;
-  }
-  .Node-self.is-numbered > .Node-bullet {
-    color: rgba(255,255,255,0.54);
-  }
-  .Node-checkbox {
-/* 	margin-right: 4px; */
-    margin-right: 0.24em;
-  }
-  .is-smallFont .Node-checkbox {
-    margin-top: 6px;
-/* 	margin-top: .6em; */
-  }
-  .is-mediumFont .Node-checkbox {
-    margin-top: 7px;
-/* 	margin-top: .70em; */
-  }
-  .is-largeFont .Node-checkbox {
-    margin-top: 9px;
-/* 	margin-top: .86em; */
-  }
-  .Node.is-checklist .Node-contentContainer,
-  .Node.is-checklist .Node-noteContainer {
-    width: calc(100% - 50px);
-  }
-  .Node.is-checklist > .Node-self.is-numbered .Node-contentContainer,
-  .Node.is-checklist > .Node-self.is-numbered .Node-noteContainer {
-    width: calc(100% - 60px);
-  }
+.is-mediumFont .Node-checkbox
+{
+	margin-top: 7px;
 }
+.is-largeFont .Node-checkbox
+{
+	margin-top: 9px;
+} */
+   .Node.is-checklist .Node-contentContainer, .Node.is-checklist .Node-noteContainer {
+      width: calc(100% - 50px);
+   }
+   .Node.is-checklist>.Node-self.is-numbered .Node-contentContainer, .Node.is-checklist>.Node-self.is-numbered .Node-noteContainer {
+      width: calc(100% - 60px);
+   }
+}
+
 @-moz-document url-prefix("https://dynalist.io/d/") {
-  .is-desktop .AppContainer.is-borderShowing .Document {
-    margin-bottom: 6em;
-    border: 2px solid rgba(0,0,0,0.1);
-    border-radius: 1px;
-    box-shadow: 0 1px 6px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 1px 6px 0px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 1px 6px 0px rgba(0,0,0,0.2);
-    background: #1d1f21 !important;
-  }
-  .DocumentTools-overlay {
-    background: none;
-    box-shadow: none;
-  }
-  .is-desktop .AppContainer.is-borderShowing .Document-rootNode {
-    padding-top: 1.6em;
-    padding-bottom: 7em;
-    min-height: 61.4vh;
-  }
-  .Document-bottomSpace {
-    display: none;
-  }
-  .DocumentBreadcrumb-item,
-  .node-link {
-    color: rgba(95,158,234,0.87);
-    text-decoration: none !important;
-    border-bottom: 2px solid transparent;
-/* 	color: rgba(95, 158, 234, 1); */
-/* 	padding-bottom: 1px; */
-  }
-  .DocumentBreadcrumb-item:hover,
-  .node-link:hover {
-    color: #5f9eea;
-    border-bottom: 2px solid;
-  }
-  .DocumentBreadcrumb-item:active,
-  .node-link:active {
-    color: #4b7cb8;
-  }
-  .node-tag,
-  .node-inline-code,
-  .node-inline-item {
-    border-radius: 2px;
-    background: rgba(255,255,255,0.12);
-  }
-  .node-inline-item {
-    vertical-align: text-bottom;
-    padding-left: 0.3em;
-    padding-right: 0.4em;
-    border: none !important;
-    line-height: inherit !important;
-  }
-  .node-inline-item:before {
-    margin-right: 0.26em;
-    color: rgba(255,255,255,0.38);
-  }
-  .node-tag:hover,
-  .node-inline-item:hover {
-    background: rgba(255,255,255,0.24);
-    color: rgba(255,255,255,0.87);
-  }
-  .node-time {
-    text-transform: lowercase;
-  }
-  .node-time.is-overdue {
-    background: #532020;
-    background: #652727 !important;
-  }
-  .node-time.is-overdue:hover {
-    background: #782e2e;
-    background: #8a3535 !important;
-  }
-  .node-tag,
-  .node-link-internal.is-displayed {
-    border: none;
-    color: inherit;
-/* 	padding-bottom: 1px; */
-/* 	margin-bottom: 1px; */
-/* 	 height 27px非整，总有一边多1px */
-/* 	border: 1px solid rgba(255, 255, 255, .12); */
-/* 	background: none; */
-/* 	background: rgba(255, 255, 255, .08); */
-  }
-  .node-link-internal.is-displayed:before {
-    margin-top: 3px;
-    line-height: 1;
-  }
-  .node-link-internal.is-displayed:hover {
-    background: #008aff;
-/* 	background: rgba(255, 255, 255, .1); */
-  }
-  .node-link-internal.is-displayed:hover,
-  .node-link-internal.is-displayed:hover:before {
-    color: rgba(255,255,255,0.87);
-/* 	color: rgba(95, 158, 234, 1); */
-  }
-  .node-inline-code {
-    vertical-align: text-bottom;
-    margin: 0 0.1em;
-/* 	margin-bottom: 1px; */
-    line-height: 1.4 !important;
-  }
-  .node-tag {
-    padding: 0 5px;
-    text-decoration: none;
-  }
-  .Node.is-selected {
-    color: #fff;
-    background: #313131;
-    background: rgba(255,255,255,0.09);
-  }
+   /* ------------------------------------------------------------ */
+   .is-desktop .AppContainer.is-borderShowing .Document {
+      margin-bottom: 6em;
+      background: #1D1F21 !important;
+      border: 2px solid rgba(0, 0, 0, .1);
+      border-radius: 0px;
+      box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
+      /* 	    box-shadow: 0 1px 12px 0px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 0 1px 12px 0px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: 0 1px 12px 0px rgba(0, 0, 0, 0.67); */
+   }
+   .DocumentTools-overlay {
+      background: none;
+      box-shadow: none;
+   }
+   .is-desktop .AppContainer.is-borderShowing .Document-rootNode {
+      padding-top: 1.6em;
+      padding-bottom: 7em;
+      min-height: 61.4vh;
+   }
+   .Document-bottomSpace {
+      display: none;
+   }
+   /* ------------------------------------------------------------ */
+   /* link */
+   .DocumentBreadcrumb-item, .node-link {
+      color: rgba(95, 158, 234, .87);
+      text-decoration: none !important;
+      border-bottom: 2px solid transparent;
+   }
+   .DocumentBreadcrumb-item:hover, .node-link:hover {
+      color: rgba(95, 158, 234, 1);
+      border-bottom: 2px solid;
+   }
+   .DocumentBreadcrumb-item:active, .node-link:active {
+      color: #4b7cb8;
+   }
+   /* inline item */
+   .node-inline-item {
+      background: rgba(255, 255, 255, .1);
+      border: none;
+      vertical-align: text-bottom;
+      padding-left: .3em;
+      padding-right: .4em;
+      line-height: inherit !important;
+   }
+   .node-inline-item:before {
+      margin-right: .26em;
+      color: rgba(255, 255, 255, .38);
+   }
+   .node-inline-item:hover {
+      background: rgba(255, 255, 255, .24);
+   }
+   .AppContainer.is-highlighting-overdue .node-time.is-overdue {
+      /* 	background: #532020; */
+      background: #652727;
+   }
+   .AppContainer.is-highlighting-overdue .node-time.is-overdue:hover {
+      /* 	background: #782e2e; */
+      background: #8a3535;
+   }
+   .node-link-internal.is-displayed {
+      color: rgba(255, 255, 255, .66);
+      /* 	padding-bottom: 1px; */
+      /* 	margin-bottom: 1px; */
+      /* 	 height 27px非整，总有一边多1px */
+      /* 	border: 1px solid rgba(255, 255, 255, .12); */
+      /* 	background: none; */
+      border: none;
+      /* 	background: rgba(255, 255, 255, .08); */
+   }
+   .node-link-internal.is-displayed:before {
+      margin-top: 3px;
+      line-height: 1;
+   }
+   .node-link-internal.is-displayed:hover {
+      background: rgba(0, 138, 255, 1);
+      color: rgba(255, 255, 255, .87);
+      /* 	background: rgba(255, 255, 255, .1); */
+      /* 	color: rgba(95, 158, 234, 1); */
+   }
+   .node-link-internal.is-displayed:hover:before {
+      color: rgba(255, 255, 255, .87);
+   }
+   .node-inline-code {
+      vertical-align: text-bottom;
+      margin: 0 .1em;
+      line-height: 1.4 !important;
+   }
 }
