@@ -100,23 +100,32 @@
 
     .Node-self.is-numbered>.Node-bullet {
         color: rgba(255, 255, 255, .54);
-        width: 20px;
+        text-align: right;
+        width: auto;
+        min-width: 22px;
     }
 
+    /* number and checkbox */
     .Node-self.is-numbered>.Node-bullet:after {
         background: none;
+        padding-right: 2px;
     }
 
     .Node-checkbox {
+        margin-top: 0px !important;
         margin-right: .24em;
     }
 
+    .is-smallFont .Node-checkbox {
+        padding-top: 3px;
+    }
+
     .is-mediumFont .Node-checkbox {
-        margin-top: 4px;
+        padding-top: 5px;
     }
 
     .is-largeFont .Node-checkbox {
-        margin-top: 6px;
+        padding-top: 7px;
     }
 
     .Node.is-checklist .Node-contentContainer, .Node.is-checklist .Node-noteContainer {
@@ -138,7 +147,7 @@
 
     .DocumentBreadcrumb-item:hover, .node-link:hover {
         /* 	color: rgba(95, 158, 234, 1); */
-        /* 		color: #70a9ec; */
+        color: #70a9ec;
         border-bottom: 2px solid;
         text-decoration: none;
     }
