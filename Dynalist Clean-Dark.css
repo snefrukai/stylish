@@ -168,11 +168,12 @@
         color: rgba(254, 254, 254, .87);
         /* 	background: rgba(0, 138, 255, .87); */
         background: rgb(23, 139, 252, 87);
-        border: 1px solid rgba(0, 138, 255, 1);
+        border-color: rgba(0, 138, 255, 1);
     }
 
     .node-link-internal.is-displayed:active {
         background: #0377e9;
+        border-color: #0377e9;
     }
 
     .node-link-internal.is-displayed:before {
@@ -207,6 +208,7 @@
 
     .node-inline-item:active {
         background: rgba(255, 255, 255, .16);
+        box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     }
 
     .AppContainer.is-highlighting-overdue .Node .node-time.is-overdue {
