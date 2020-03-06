@@ -1,7 +1,7 @@
 @-moz-document url-prefix("https://dynalist.io/d/") {
 /* font-family */
  .pane-item-header, .DocumentBreadcrumb-item, .Node.is-currentRoot > .Node-self .Node-renderedContent, .Node.is-currentRoot > .Node-self .Node-content, .Node-children .Node-renderedContent, .Node-children .Node-content {
-	font-family: Roboto Slab, Georgia, Times, serif;
+	/* 	font-family: Roboto Slab, Segoe UI, Roboto, "微软雅黑", "冬青黑体", system-ui; */
 }
 /* item */
  .Node-children .Node-outer .Node {
@@ -20,7 +20,7 @@
 	margin-left: -.3em;
 	padding-left: .3em;
 	/* 	change fo fixed font size if you need */
-	font-size: .8rem;
+	/* 	font-size: .9rem; */
 	/* 	font-size: 14px; */
 }
 /* note */
@@ -54,6 +54,9 @@
 .Node.is-checked .Node-checkbox, .Node.is-checked .Node-content, .Node.is-checked .Node-renderedContent, .Node.is-checked .Node-note, .Node.is-checked .Node-renderedNote {
 	opacity: .3;
 	color: inherit;
+}
+.Node.has-checkbox > .Node-self .Node-contentContainer, .Node.has-checkbox > .Node-self .Node-noteContainer {
+	width: calc(100% - 50px);
 }
 }
 
